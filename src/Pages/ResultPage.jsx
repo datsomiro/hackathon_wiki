@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 
-const api = 'https://api.skypicker.com/flights?fly_from=JFK&fly_to=MCO';
+const api = 'https://api.skypicker.com/flights?fly_from=PRG&fly_to=VLC';
 const ResultPage = () => {
     const [detailFligth, setDetailFlight] = useState([])
 
     useEffect(() => {
-       fetchingFlights()
+        fetchingFlights()
     }, [])
 
     const fetchingFlights = async () => {
@@ -17,9 +17,9 @@ const ResultPage = () => {
     }
 
     return (
-        {...detailFligth} 
-        
-        
+        { ...detailFligth }
+
+
     )
 }
 
