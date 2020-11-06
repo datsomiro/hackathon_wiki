@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import SearchBAr from '../Components/SearchBar';
+import SearchBar from '../Components/SearchBar';
+import SearchResults from '../Components/SearchResults';
 
 const api = 'https://api.skypicker.com/flights?partner=picky&fly_from=JFK&fly_to=MCO';
 
@@ -32,6 +33,7 @@ const Homepage = () => {
          //  ) : (
          //          <span>Unavailable</span>
          //      )}*/}
+            <SearchResults searchResults={allFlights} />
          <p>hello</p>
         </div>
     );
