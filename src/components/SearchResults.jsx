@@ -1,5 +1,5 @@
 import React ,{ useState , useEffect } from 'react'; 
-
+import { DateTime } from 'luxon';
 
 
 
@@ -10,7 +10,7 @@ function SearchResults(props) {
     //if i want to destruct the object props right away use ({})
 
     const flightinfo = props.searchResults.map((flight) => {
-    return <a >{flight}</a>
+        return <a >{DateTime.fromMillis(flight.dTime * 1000).toFormat('hh:mm')}</a>
    });
 
    console.log(flightinfo);
