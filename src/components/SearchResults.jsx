@@ -25,9 +25,10 @@ function SearchResults(props) {
 
     return (
             <>
+
         <h1>List of Departures</h1>
         
-      <div  class= "result box">{flightinfo}</div>
+      <div style={{ border:'1px solid black', borderRadius: '5px' , marginLeft :'10em', marginRight :'10em' }} class= "result box">{flightinfo}</div>
       </>
     )    
 }
