@@ -1,12 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Homepage from './Pages/Homepage';
+import React, { useEffect, useState } from 'react';
+import ResultPage from './Pages/ResultPage';
 
-function App() {
-  return (
-    <div className="App">
-      <input type="text" name=""/>
-      </div>
-  );
-}
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-export default App;
+  
+  function App() {
+    return (
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/:code" component={ResultPage} />
+
+          </Switch>
+        </div>
+      </Router>
+    )
+  };
+
+  export default App;
+
+  
+  
+
+
